@@ -1,0 +1,12 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+package mypackage;
+
+class Main {
+   Main() {
+   }
+
+   public static void main(String[] var0) {
+      Encapsulation var1 = new Encapsulation();
+      System.out.println("Name is " + var1.getName());
+   }
+}

@@ -1,48 +1,50 @@
-//Implementation of abstraction
-package OOPS;
+package mypackage;
 
 import java.util.Scanner;
 
-abstract class Softwares{
+// Implementation of abstraction
+abstract class softwares{
     String user_name;
     String password;
+
     void user_input(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Username");
+        System.out.println("Enter a Username :");
         user_name = sc.nextLine();
-        System.out.println("Enter Password");
+        System.out.println("Enter a Password");
         password = sc.nextLine();
     }
-    void user_login(){
-        System.out.println("WELCOME TO INSTAGRAM");
-        System.out.println("-------------------------");
+
+    void User_login(){
+        System.out.println("Welcome To Instagram");
+        System.out.println("--------------------");
         System.out.println("Please Login Here...!!");
     }
-    abstract void aap_open();
-
+    abstract void app_open();
 }
-class Instagram extends Softwares{
-    @Override
-    void aap_open() {
-        if(user_name.equals("Haidar") & password.equals("8980661175")){
-            System.out.println("SuccessFully Login, App is Open...");
 
-        }else{
-            System.out.println("Invalid Username & password");
+class Insta extends softwares{
+    @Override
+    void app_open() {
+        while (true){
+            if (user_name.equals("Saifee") && password.equals("2003@")){
+                System.out.println("Successfully Login,App Is Open...");
+                break;
+            }
+            else{
+                System.out.println("Invalid username or password :(");
+                user_input();
+            }
         }
     }
-    void app_close(){
-        System.out.println("App is Close....");
-    }
-
 }
 
 public class Apps {
     public static void main(String[] args) {
-        Instagram i = new Instagram();
-        i.user_login();
-        i.user_input();
-        i.aap_open();
-//      i.app_close();
+        Insta s = new Insta();
+        s.User_login();
+        s.user_input();
+        s.app_open();
+
     }
 }

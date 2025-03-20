@@ -1,14 +1,14 @@
-public class Encapsulation {  // Class name corrected
+package mypackage;
+
+public class Encapsulation {  
     private String name = "Saifee";
 
-    public String getName() {  // Method name should follow camelCase properly
+    public String getName() {  
         return name;
     }
-}
 
-class Main {
-    public static void main(String[] args) {
-        Encapsulation e = new Encapsulation();  // Updated class name
-        System.out.println("Name is " + e.getName());  // Proper spacing
+    public static void main(String[] args) {  // Move main method inside Encapsulation class
+        Encapsulation e = new Encapsulation();  
+        System.out.println("Name is " + e.getName());  
     }
 }
